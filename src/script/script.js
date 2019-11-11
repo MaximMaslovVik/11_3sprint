@@ -1,5 +1,12 @@
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort_04' : 'https://praktikum.tk/cohort_04';
-const api = new Api({
+import {Api} from "./api.js";
+import {UserInfo} from "./userinfo.js";
+import {CardList} from "./cardlist.js";
+import {BigImagePopup} from "./popup.js";
+import {UserInfoPopup} from "./popup.js";
+import {NewCardPopup} from "./popup.js";
+
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort_03' : 'https://praktikum.tk/cohort_03';
+const api = new Api ({
   serverUrl,
   headers: {
     authorization: 'f53531ab-b595-4458-be7c-a3a5dc7cf26c',

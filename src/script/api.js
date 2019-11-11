@@ -1,6 +1,6 @@
 export class Api {
   constructor(options) {
-    this.options = options; 
+    this.options = options;
  
   }
 

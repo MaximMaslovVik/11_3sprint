@@ -1,3 +1,6 @@
+import {api} from "./script.js";
+import {Api} from "./api.js";
+
 class UserInfo {
   constructor(container, Api) {
     this.api = api;
