@@ -1,7 +1,6 @@
 export class Api {
   constructor(options) {
-    this.options = options;
- 
+    this.options = options;  
   }
 
   getUserInfo() {
@@ -21,7 +20,7 @@ export class Api {
   }
 
   fetchInternal(url, method, body) {
-    const promise = fetch(`${this.options.baseUrl}${url}`, {
+    const promise = fetch(`${this.options.serverUrl}${url}`, {
       method: method,
       headers: this.options.headers,
       body: body

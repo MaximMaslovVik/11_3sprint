@@ -1,3 +1,5 @@
+import {CardList} from "./cardList.js";
+
 export class Card {
     constructor(name, link) {
         this.name = name;
@@ -46,6 +48,3 @@ export class Card {
     remove() {
     } 
   }
-  /*
-userInfo.load();
-cardList.load();*/

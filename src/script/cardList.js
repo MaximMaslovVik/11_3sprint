@@ -1,4 +1,5 @@
 import {api} from "./script.js";
+import {Card} from "./card.js";
 
 export class CardList {
   constructor(container, api) {

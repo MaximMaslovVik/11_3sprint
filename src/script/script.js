@@ -5,7 +5,7 @@ import {BigImagePopup} from "./popup.js";
 import {UserInfoPopup} from "./popup.js";
 import {NewCardPopup} from "./popup.js";
 
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort_03' : 'https://praktikum.tk/cohort_03';
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort3' : 'https://praktikum.tk/cohort3';
 const api = new Api ({
   serverUrl,
   headers: {
