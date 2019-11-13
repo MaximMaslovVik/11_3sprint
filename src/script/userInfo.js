@@ -1,13 +1,9 @@
-import {api} from "./script.js";
-import {Api} from "./api.js";
-
 class UserInfo {
-  constructor(container, Api) {
+  constructor(container, api) {
     this.api = api;
     this.nameLabel = container.querySelector(".user-info__name");
     this.aboutLabel = container.querySelector('.user-info__job');
-    this.avatarElement = container.querySelector('.user-info__photo');    
-    
+    this.avatarElement = container.querySelector('.user-info__photo');       
   }
 
   load() {
@@ -32,8 +28,7 @@ class UserInfo {
     this.aboutLabel.textContent = about;
 
     this.api.editUserInfo(name, about);
-  }
-  
+  }  
 }
 
 export {UserInfo};

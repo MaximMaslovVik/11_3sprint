@@ -1,5 +1,3 @@
-import {api} from "./script.js";
-
 export class Popup {
   constructor(container) {
     this.container = container;

@@ -1,9 +1,7 @@
 import {Api} from "./api.js";
-import {UserInfo} from "./userinfo.js";
-import {CardList} from "./cardlist.js";
-import {BigImagePopup} from "./popup.js";
-import {UserInfoPopup} from "./popup.js";
-import {NewCardPopup} from "./popup.js";
+import {UserInfo} from "./userInfo.js";
+import {CardList} from "./cardList.js";
+import {BigImagePopup, UserInfoPopup, NewCardPopup} from "./popup.js";
 
 const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort3' : 'https://praktikum.tk/cohort3';
 const api = new Api ({
@@ -13,19 +11,16 @@ const api = new Api ({
     "Content-Type": 'application/json'
   }  
 });
-  const userInfo = new UserInfo(document.querySelector('.user-info'), api);
-  const cardList = new CardList(document.querySelector('.places-list'), api);
+const userInfo = new UserInfo(document.querySelector('.user-info'), api);
+const cardList = new CardList(document.querySelector('.places-list'), api);
 
-  const bigImagePopup = new BigImagePopup(document.querySelector('.big-image'));
-  const userInfoPopup = new UserInfoPopup(
-    document.querySelector('.popupCreatInfo'),
-    document.querySelector('.user-info .edit__button'),
-    userInfo
-  );
-  const newCardPopup = new NewCardPopup(document.querySelector('.popup'), document.querySelector('.user-info__button'), cardList);
+const bigImagePopup = new BigImagePopup(document.querySelector('.big-image'));
+const userInfoPopup = new UserInfoPopup(
+  document.querySelector('.popupCreatInfo'),
+  document.querySelector('.user-info .edit__button'),
+  userInfo
+);
+const newCardPopup = new NewCardPopup(document.querySelector('.popup'), document.querySelector('.user-info__button'), cardList);
 
-  userInfo.load();
-  cardList.load();
-
-
-export {serverUrl, api, userInfo, cardList, bigImagePopup, userInfoPopup, newCardPopup, };
+userInfo.load();
+cardList.load();
