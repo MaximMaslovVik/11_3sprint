@@ -1,3 +1,4 @@
+import {Validator} from "./validate.js";
 export class Popup {
   constructor(container) {
     this.container = container;
@@ -29,7 +30,6 @@ export class BigImagePopup extends Popup {
 export class FormPopup extends Popup {
   constructor(container) {
     super(container);
-
     this.form = container.querySelector('form');
     this.submitButton = this.form.querySelector('.popup__button');
     this.label1 = this.form.querySelector('.chek__open_first');

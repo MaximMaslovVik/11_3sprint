@@ -1,4 +1,5 @@
-import {CardList} from "./cardList.js";
+import {bigImagePopup} from "./script.js";
+
 
 export class Card {
     constructor(name, link) {
@@ -20,8 +21,7 @@ export class Card {
       const placeCardDescription = this.createAndAppendElement(placeCard, 'div', 'place-card__description');
       const placeCardName = this.createAndAppendElement(placeCardDescription, 'h3', 'place-card__name');
       const placeCardLikeIcon = this.createAndAppendElement(placeCardDescription, 'button', 'place-card__like-icon');
-      const bigImage = document.createElement('div');
-
+      
 		placeCardImage.setAttribute('style', `background-image: url(${this.link})`);
 		  placeCardName.textContent = this.name;
 

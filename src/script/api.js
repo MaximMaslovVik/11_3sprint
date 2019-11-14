@@ -4,7 +4,7 @@ export class Api {
   }
 
   getUserInfo() {
-    return this.fetchInternal(`/users/me`, "GET");
+    return this.fetchInternal("/users/me", "GET");
   }
 
   getCards() {

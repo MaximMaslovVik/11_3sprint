@@ -24,3 +24,5 @@ const newCardPopup = new NewCardPopup(document.querySelector('.popup'), document
 
 userInfo.load();
 cardList.load();
+
+export {bigImagePopup, userInfoPopup, newCardPopup};
